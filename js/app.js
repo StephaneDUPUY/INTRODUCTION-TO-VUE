@@ -5,7 +5,7 @@ const app = new Vue({
     newTweet: '',
     tweets: [
       'On commence',
-      'C\'est parti.', 
+      'C\'est parti.',
       'Apprenons à utiliser VueJS.'
     ],
     bio: 'Impatient de commencer.'
