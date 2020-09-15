@@ -5,8 +5,9 @@
         <title>Page tweeter en VueJS</title>
         <link rel="stylesheet" type="text/css" href="./css/reset.css">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
-        <script src="./js/app.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script> <!-- load vue -->
+        <script src="./js/components/Tweet.js" defer></script> <!-- load component Tweet.js -->
+        <script src="./js/app.js" defer></script> <!-- load app -->
     </head>
     <body>
         <div id="app">
@@ -16,17 +17,19 @@
                     <div class="image-container">
                     <img src="profile.png" alt="profile picture">
                     </div>
-                    <h3>{{ username }}</h3>
+                    <h3>{{ username }}</h3> <!-- mustache notation to load data dynamically -->
                 </div>
                 <div class="user-bio" v-if="bio">
                     <em>Bio: </em> {{bio}}
                 </div>
             </div>
             <div class="tweets">
-                <div class="tweet" v-for="tweet in tweets">
-                    <h3>{{ username }}</h3>
-                    <p>{{ tweet }}</p>
-                </div>
+                <!-- start of tweet component
+                v-for browse tweets array from app data
+                v-bind load value from  app data to use it as a value for props (here with props message and author) -->
+                <tweet  v-for="tweet in tweets"
+                        v-bind:message="tweet"
+                        v-bind:author="username"></tweet>
             </div>
             <div class="settings">
                 <h2>Paramètres</h2>
