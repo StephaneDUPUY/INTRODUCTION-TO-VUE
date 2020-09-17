@@ -1,12 +1,12 @@
 const app = new Vue({
   el: '#app',
   data: {
-    username: 'Stéphane',
+    username: 'Stéphane DUPUY',
     newTweet: '',
     tweets: [
-      'On commence',
-      'Apprenons à utiliser VueJS.'
+      'Mon Github: https://github.com/StephaneDUPUY',
+      'Mon portfolio: http://portfolio.webtechbysteph.com/ '
     ],
-    bio: 'Impatient de commencer.'
+    bio: 'Développeur d\'application Web, en recherche de poste sur la Vendée ou en télétravail'
   }
 });
