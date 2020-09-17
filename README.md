@@ -1,4 +1,4 @@
-# INTRODUCTION-TO-VUE
+# Twitter - Vue JS
 
-* Data
-* Templates
+*   Data
+*   Templates
